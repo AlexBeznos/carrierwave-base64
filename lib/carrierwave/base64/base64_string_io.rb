@@ -13,7 +13,7 @@ module Carrierwave
 
         @file_name = file_name
         @file_format = get_file_format description
-        bytes = ::Base64.decode64 encoded_bytes
+        bytes = ::Base64.urlsafe_decode64 encoded_bytes
 
         super bytes
       end
